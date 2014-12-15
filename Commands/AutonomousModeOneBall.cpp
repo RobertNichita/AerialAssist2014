@@ -16,13 +16,13 @@ AutonomousModeOneBall::AutonomousModeOneBall()
 {
   AddSequential(new AutonomousDriveCommand(1.0f, TURN_CORRECTION, 2.2));// straight line
   AddSequential(new AutonomousDriveCommand(0f, TURN_CORRECTION, 0));//stop
-  Wait 1; //wait 1 second
+  Wait(1.0f); //wait 1 second
   AddSequential(new AutonomousDriveCommand(1.0f, 1.0f, 2.2));// turn
   AddSequential(new AutonomousDriveCommand(1.0f, TURN_CORRECTION, 2.2));//straight
   AddSequential(new AutonomousDriveCommand(0, TURN_CORRECTION, 0));//stop
-  Wait 1;//wait 1 second
+  Wait(1.0f);//wait 1 second
   AddSequential(new AutonomousDriveCommand(1.0f, -1.0f, 2.2));//turn other direction
   AddSequential(new AutonomousDriveCommand(1.0f, TURN_CORRECTION, 2.2));//straight
   AddSequential(new AutonomousDriveCommand(0, TURN_CORRECTION, 0));//stop
-  wait 1;//wait 1 second
+  Wait(1.0f);//wait 1 second
 }
